@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "岗位招呼语助手",
+  "description": "自动获取当前页面的岗位描述，并结合个人简历生成个性化求职招呼语。",
+  "version": "1.0.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "生成岗位招呼语",
+    "default_popup": "popup.html"
+  },
+  "icons": {}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>岗位招呼语助手</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 12px;
+        width: 380px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin: 8px 0 4px;
+        font-weight: 600;
+      }
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 80px;
+        resize: vertical;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      input[type="password"],
+      input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4px 6px;
+        font-size: 12px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 6px 10px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .small {
+        font-size: 11px;
+        color: #666;
+      }
+      #status {
+        margin-top: 6px;
+        font-size: 11px;
+        color: #666;
+      }
+      #greeting {
+        margin-top: 8px;
+        padding: 6px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background: #fafafa;
+        white-space: pre-wrap;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>岗位招呼语助手</h1>
+
+    <label for="apiKey">OpenAI API Key（本地保存，不会上传）</label>
+    <input id="apiKey" type="password" placeholder="sk-..." />
+
+    <label for="resume">我的简历简介 / 技能概述</label>
+    <textarea
+      id="resume"
+      placeholder="例如：5 年后端开发经验，熟悉 Java / Spring / MySQL / 分布式系统..."
+    ></textarea>
+
+    <label for="tone">招呼语风格（可选）</label>
+    <input
+      id="tone"
+      type="text"
+      placeholder="例如：真诚、礼貌、稍微轻松一点"
+    />
+
+    <button id="generateBtn">生成针对当前岗位的招呼语</button>
+    <button id="clearBtn" style="margin-left:8px;">清除招呼语</button>
+
+    <div id="status" class="small"></div>
+
+    <div id="greeting"></div>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
+
